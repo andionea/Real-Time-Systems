@@ -1,0 +1,41 @@
+@startuml ClassDiagram
+class Thread {
+}
+
+class Execution1 {
+    - monitor : Integer
+    - sleep_min : int
+    - sleep_max : int
+    - activity_min : int
+    - activity_max : int
+    + Execution1(monitor : Integer, sleep_min : int, sleep_max : int, activity_min : int, activity_max : int) : void
+    + run() : void
+}
+
+class Execution2 {
+    - monitor1 : Integer
+    - monitor2 : Integer
+    - sleep_min : int
+    - sleep_max : int
+    - activity_min : int
+    - activity_max : int
+    + Execution2(monitor1 : Integer, monitor2 : Integer, sleep_min : int, sleep_max : int, activity_min : int, activity_max : int) : void
+    + run() : void
+}
+
+class Execution3 {
+    - monitor1 : Integer
+    - monitor2 : Integer
+    - sleep_min : int
+    - sleep_max : int
+    - activity_min : int
+    - activity_max : int
+    + Execution3(monitor1 : Integer, monitor2 : Integer, sleep_min : int, sleep_max : int, activity_min : int, activity_max : int) : void
+    + run() : void
+}
+
+Execution1 <|-- Thread
+Execution2 <|-- Thread
+Execution3 <|-- Thread
+
+@enduml
